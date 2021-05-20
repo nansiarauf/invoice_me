@@ -8,25 +8,31 @@ const Invoices = () => {
   );
   return (
     <div>
-      <h1 className="text-white">ALL INVOICES SENT OUT</h1>
+      <h1 className="text-white text-center">ALL INVOICES SENT OUT</h1>
       {loading && <h1>loading ...</h1>}
       {error && <h1>error</h1>}
       {invoices && (
-        <Table>
+        <Table className="table table-hover ml-5">
           <thead>
-            <th>BUSINESS NAME</th>
-            <th>INVOICE OWNER</th>
-            <th>EMAIL</th>
-            <th>AMOUNT DUE</th>
-          </thead>
-          {invoices.map((invoice) => (
-            <tr key={invoice._id}>
-              <td>{invoice.businessName}</td>
-              <td>{invoice.name}</td>
-              <td>{invoice.email}</td>
-              <td>{invoice.amount_due}</td>
+            <tr>
+              <th scope="col">BUSINESS NAME</th>
+              <th scope="col">INVOICE OWNER</th>
+              <th scope="col">EMAIL</th>
+              <th scope="col">SERVICE</th>
+              <th scope="col">AMOUNT DUE</th>
             </tr>
-          ))}
+          </thead>
+          <tbody>
+            {invoices.map((invoice) => (
+              <tr key={invoice._id} className="table-primary">
+                <td>{invoice.businessName}</td>
+                <td>{invoice.name}</td>
+                <td>{invoice.email}</td>
+                <td>{invoice.service}</td>
+                <td>{invoice.amount_due}</td>
+              </tr>
+            ))}
+          </tbody>
         </Table>
       )}
     </div>

@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 import Invoices from "./Invoices";
 // import Login from "./Login";
 import AddClient from "./AddClient";
-import clients from "./Clients";
+import Clients from "./Clients";
 import AccountPage from "./AccountPage";
 import InvoicesPage from "./InvoicesPage";
 import SettingsPage from "./SettingsPage";
@@ -75,9 +75,9 @@ const Dashboard = () => {
               }}
             />
             <Route path="/dashboard/invoices" component={Invoices} />
-            <Route path="/dashboard/addclient" component={AddClient} />
-            <Route path="/dashboard/clients" component={clients} />
             <Route path="/dashboard/create" component={InvoicesPage} />
+            <Route path="/dashboard/addclient" component={AddClient} />
+            <Route path="/dashboard/all" component={Clients} />
             <Route path="/dashboard/account" component={AccountPage} />
             <Route path="/dashboard/settings" component={SettingsPage} />
           </div>
