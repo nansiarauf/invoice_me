@@ -20,6 +20,7 @@ const Invoices = () => {
               <th scope="col">EMAIL</th>
               <th scope="col">SERVICE</th>
               <th scope="col">AMOUNT DUE</th>
+              <th scope="col">REMINDER DATE</th>
             </tr>
           </thead>
           <tbody>
@@ -30,6 +31,7 @@ const Invoices = () => {
                 <td>{invoice.email}</td>
                 <td>{invoice.service}</td>
                 <td>{invoice.amount_due}</td>
+                <td>{invoice.reminder_date}</td>
               </tr>
             ))}
           </tbody>
