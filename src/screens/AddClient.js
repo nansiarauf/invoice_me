@@ -1,6 +1,7 @@
 import { Form, Button, Col, Container } from "react-bootstrap";
 import { useState, useContext } from "react";
 import { ClientContext } from "../contexts/ClientContext";
+import Footer from "../components/Footer";
 
 const AddClient = ({ location }) => {
   const [businessName, setBusinessName] = useState("");
@@ -83,6 +84,7 @@ const AddClient = ({ location }) => {
             ADD CLIENT
           </Button>
         </Form>
+        <Footer />
       </Col>
     </Container>
   );

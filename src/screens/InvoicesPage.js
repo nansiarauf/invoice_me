@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Button, Form, Container, Col } from "react-bootstrap";
+import Footer from "../components/Footer";
 
 const InvoicesPage = () => {
   const [name, setName] = useState("");
@@ -64,6 +65,7 @@ const InvoicesPage = () => {
             SEND
           </Button>
         </Form>
+        <Footer />
       </Col>
     </Container>
   );

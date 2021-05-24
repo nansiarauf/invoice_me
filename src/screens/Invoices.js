@@ -1,6 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 import useInvoice from "../hooks/useInvoices";
+import Footer from "../components/Footer";
 
 const Invoices = () => {
   const { error, invoices, loading } = useInvoice(
@@ -37,6 +38,7 @@ const Invoices = () => {
           </tbody>
         </Table>
       )}
+      <Footer />
     </div>
   );
 };

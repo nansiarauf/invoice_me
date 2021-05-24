@@ -10,6 +10,7 @@ import SettingsPage from "./SettingsPage";
 import Header from "../components/Header";
 import SideBar from "../components/SideBar";
 import { Card, Container, Col } from "react-bootstrap";
+// import Footer from "../components/Footer";
 
 const Dashboard = () => {
   return (
@@ -25,7 +26,17 @@ const Dashboard = () => {
               render={() => {
                 return (
                   <Container className="d-flex justify-content-center">
-                    <Col xs={12} sm={12} md={6} lg={8}>
+                    <Col
+                      xs={12}
+                      sm={12}
+                      md={6}
+                      lg={8}
+                      style={{
+                        display: "grid",
+                        gridGap: "20px",
+                        gridTemplateColumns: "1fr 1fr",
+                      }}
+                    >
                       <Card>
                         <div className="card text-white bg-secondary mb-3">
                           <div className="card-header">Payment Reminders</div>
@@ -65,6 +76,19 @@ const Dashboard = () => {
                               important things, ones such as paying out debts.
                               Make sure you ring a bell in clients ears to
                               settle debts owed you.
+                            </p>
+                          </div>
+                        </div>
+                      </Card>
+                      <Card>
+                        <div className="card text-white bg-secondary mb-3">
+                          <div className="card-header">Easy Access</div>
+                          <div className="card-body">
+                            <h4 className="card-title">All invoices</h4>
+                            <p className="card-text">
+                              Access all your invoice history with ease.Get
+                              insight into which reminders you have sent out so
+                              you can easily reconcile payments received
                             </p>
                           </div>
                         </div>
