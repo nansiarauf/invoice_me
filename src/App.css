@@ -133,3 +133,12 @@ nav {
 .form-title {
   text-align: center;
 }
+/* .client-card {
+  display: grid;
+  grid-template-columns: 25%;
+} */
+
+/* .client-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+} */

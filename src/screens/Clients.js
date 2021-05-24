@@ -10,14 +10,12 @@ const Clients = () => {
       {loading && <h1>loading ...</h1>}
       {error && <h1>error</h1>}
       {clients && (
-        <Card
-          className="card text-white bg-primary ml-5"
-          style={{ width: "20rem" }}
-        >
-          <div className="card-header">Client Details</div>
+        <main style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+          {/* <div className="card-header">Client Details</div> */}
           {clients.map((client) => (
-            <>
+            <Card style={{ width: "25rem" }}>
               <div className="card-body" key={client._id}>
+                <div className="card-header">Client Details</div>
                 <h4 className="card-title">Business Name:</h4>
                 <span>{client.businessName}</span>
                 <h4 className="card-title">Owner:</h4>
@@ -29,9 +27,9 @@ const Clients = () => {
                 <h4 className="card-title">Address:</h4>
                 <span>{client.address}</span>
               </div>
-            </>
+            </Card>
           ))}
-        </Card>
+        </main>
       )}
     </div>
   );
